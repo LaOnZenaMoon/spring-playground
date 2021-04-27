@@ -1,0 +1,13 @@
+dependencies {
+    implementation project(':core')
+
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    // Runtime H2
+    implementation 'com.h2database:h2'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // QueryDsl Reader
+    implementation 'com.github.jojoldu.spring-batch-querydsl:spring-batch-querydsl-reader:2.3.3'
+}
