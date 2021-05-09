@@ -1,7 +1,3 @@
 include 'core'
 include 'spring-mvc'
-include 'spring-boot'
 include 'spring-batch'
-include 'spring-security'
-
-
