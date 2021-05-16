@@ -1,9 +1,0 @@
-dependencies {
-    implementation project(':core')
-
-    // Runtime H2
-    implementation 'com.h2database:h2'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-
-    implementation 'org.springframework:spring-webmvc:5.3.5'
-}

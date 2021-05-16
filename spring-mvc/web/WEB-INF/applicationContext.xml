@@ -5,8 +5,6 @@
        xmlns:beans="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-  <mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
-
   <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <beans:property name="prefix" value="/WEB-INF/views" />
     <beans:property name="suffix" value=".jsp" />
