@@ -1,0 +1,17 @@
+dependencies {
+    implementation project(':core')
+
+    // Spring framework
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Runtime H2
+    implementation 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+
+    // BulkInsert Test data
+    testImplementation 'com.github.javafaker:javafaker:0.12'
+
+    // Spring REST Docs
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+}
