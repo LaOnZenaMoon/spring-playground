@@ -1,33 +1,43 @@
-//buildscript {
-//    repositories {
-//        mavenCentral()
-//    }
-//
-//    dependencies {
-//        classpath('io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE')
-//    }
-//}
-//
-//allprojects {
-//    group('me.lozm')
-//    version('1.0')
-//}
-//
-//subprojects {
-//    apply plugin: 'java'
-//    apply plugin: 'io.spring.dependency-management'
-//
-//    sourceCompatibility = 1.8
-//
-//    repositories {
-//        mavenCentral()
-//    }
-//
-//    dependencies {
-//        implementation 'org.apache.commons:commons-lang3:3.10'
-//    }
-//
-//}
-group 'me.lozm'
-version '1.0'
+buildscript {
+    ext {
+        springBootVersion = '2.2.6.RELEASE'
+        querydslPluginVersion = '1.0.10'
+    }
+    repositories {
+        mavenCentral()
+        maven { url"https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:${querydslPluginVersion}"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.9.RELEASE"
+    }
+}
 
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'me.lozm'
+    version = '1.0'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.apache.commons:commons-lang3:3.10'
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
+    }
+}

@@ -1,7 +1,7 @@
 # spring-playground
 All about spring framework
 
-## spring-mvc
+## core
 
 ## spring-boot
 

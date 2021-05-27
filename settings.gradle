@@ -1,3 +1,5 @@
 rootProject.name = 'spring-playground'
-include 'web-mvc'
+include 'spring-boot'
+include 'core'
+include 'spring-batch'
 
