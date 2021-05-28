@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
-@RequestMapping("healthCheck")
+@RequestMapping(value = "healthCheck", produces = "application/json")
 @RestController
 public class HealthCheckController {
 
@@ -49,8 +49,8 @@ public class HealthCheckController {
         }
     }
 
-    @GetMapping(produces = "application/json")
-    public ResponseEntity<ShortResponseDto> healthCheckGet(@RequestParam(value = "format", required = false) String format) {
+    @GetMapping
+    public ResponseEntity<ShortResponseDto> getHealthCheck(@RequestParam(value = "format", required = false) String format) {
         if ("short".equals(format)) {
             return new ResponseEntity<>(new ShortResponseDto(HttpStatus.OK.getReasonPhrase()), HttpStatus.OK);
         } else if ("full".equals(format)) {
@@ -60,20 +60,24 @@ public class HealthCheckController {
         return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping(produces = "application/json")
-    public ResponseEntity healthCheckPut() {
+    @PostMapping
+    public ResponseEntity postHealthCheck() {
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    @PutMapping
+    public ResponseEntity putHealthCheck() {
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    @PatchMapping
+    public ResponseEntity healthCheckPatch() {
         return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 
-    @PostMapping(produces = "application/json")
-    public ResponseEntity healthCheckPost() {
-        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-    }
-
-
-    @DeleteMapping(produces = "application/json")
+    @DeleteMapping
     public ResponseEntity healthCheckDelete() {
-        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
 }

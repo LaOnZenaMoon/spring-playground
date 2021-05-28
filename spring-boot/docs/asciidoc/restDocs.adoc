@@ -10,3 +10,17 @@ endif::[]
 :site-url: /build/asciidoc/html5/
 :operation-curl-request-title: Example request
 :operation-http-response-title: Example response
+
+
+== Board
+=== Get health check data
+Using `GET` method, get health check data
+
+==== Request
+//include::{snippets}/get-healthCheck/path-parameters.adoc[]
+include::{snippets}/get-healthCheck/request-parameters.adoc[]
+include::{snippets}/get-healthCheck/http-request.adoc[]
+
+==== Response
+include::{snippets}/get-healthCheck/response-fields.adoc[]
+include::{snippets}/get-healthCheck/http-response.adoc[]

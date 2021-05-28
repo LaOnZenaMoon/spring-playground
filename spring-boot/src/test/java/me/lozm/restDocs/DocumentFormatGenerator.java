@@ -18,4 +18,8 @@ public interface DocumentFormatGenerator {
         return key("format").value("사용: Y, 미사용: N");
     }
 
+    static Attributes.Attribute getHealthCheckType() {
+        return key("format").value("short, full");
+    }
+
 }
