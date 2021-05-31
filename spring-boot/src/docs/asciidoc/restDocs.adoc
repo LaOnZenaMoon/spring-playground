@@ -72,3 +72,27 @@ include::{snippets}/delete-healthCheck/http-request.adoc[]
 ==== Response
 include::{snippets}/delete-healthCheck/response-fields.adoc[]
 include::{snippets}/delete-healthCheck/http-response.adoc[]
+
+== Mocking test
+=== Post External API Integration test(version 1)
+Using `POST` method, test internal & external API integration(version 1)
+
+==== Request
+include::{snippets}/post-external-api-integration-v1/request-fields.adoc[]
+include::{snippets}/post-external-api-integration-v1/http-request.adoc[]
+
+==== Response
+include::{snippets}/post-external-api-integration-v1/response-fields.adoc[]
+include::{snippets}/post-external-api-integration-v1/http-response.adoc[]
+
+
+=== Post External API Integration test(version 2)
+Using `POST` method, test internal & external API integration(version 2)
+
+==== Request
+include::{snippets}/post-external-api-integration-v2/request-fields.adoc[]
+include::{snippets}/post-external-api-integration-v2/http-request.adoc[]
+
+==== Response
+include::{snippets}/post-external-api-integration-v2/response-fields.adoc[]
+include::{snippets}/post-external-api-integration-v2/http-response.adoc[]

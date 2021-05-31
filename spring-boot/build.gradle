@@ -17,6 +17,9 @@ dependencies {
     implementation 'com.h2database:h2'
     implementation 'org.springframework.boot:spring-boot-devtools'
 
+    // httpclient
+    implementation 'org.apache.httpcomponents:httpclient:4.5.10'
+
     // BulkInsert Test data
     testImplementation 'com.github.javafaker:javafaker:0.12'
 

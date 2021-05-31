@@ -29,3 +29,4 @@ decorator:
   datasource:
     p6spy:
       enable-logging: true
+      log-format: '#%(connectionId) | %(executionTime)ms | %(category) | %(sql)'
