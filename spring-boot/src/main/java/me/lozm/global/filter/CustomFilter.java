@@ -6,7 +6,6 @@ import org.apache.catalina.connector.RequestFacade;
 
 import javax.servlet.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @Slf4j
 public class CustomFilter implements Filter {
