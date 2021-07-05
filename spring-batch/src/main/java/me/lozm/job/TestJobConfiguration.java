@@ -2,7 +2,7 @@ package me.lozm.job;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.lozm.global.job.CommonJobConfiguration;
+import me.lozm.global.common.CommonJobConfiguration;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobScope;
