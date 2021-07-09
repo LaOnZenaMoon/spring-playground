@@ -13,3 +13,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true

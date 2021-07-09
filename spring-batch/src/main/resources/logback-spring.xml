@@ -17,13 +17,13 @@
         </encoder>
     </appender>
 
-    <springProfile name="local">
+    <springProfile name="local, dev">
         <root level="${LOG_LEVEL}">
             <appender-ref ref="CONSOLE"/>
         </root>
     </springProfile>
 
-    <springProfile name="dev, prod">
+    <springProfile name="prod">
         <include resource="logback/application-appender.xml"/>
         <include resource="logback/error-appender.xml"/>
         <root level="${LOG_LEVEL}">

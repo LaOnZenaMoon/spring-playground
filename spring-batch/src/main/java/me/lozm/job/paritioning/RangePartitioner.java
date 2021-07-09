@@ -1,8 +1,6 @@
 package me.lozm.job.paritioning;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.partition.support.Partitioner;
 import org.springframework.batch.item.ExecutionContext;
@@ -12,10 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
-@Getter
-@Setter
 @RequiredArgsConstructor
-public class IdRangePartitioner implements Partitioner {
+public class RangePartitioner implements Partitioner {
 
     private final LocalDate startDate;
     private final LocalDate endDate;
@@ -29,7 +25,7 @@ public class IdRangePartitioner implements Partitioner {
         LocalDate targetDate = startDate;
         while (targetDate.isBefore(endDate)) {
             ExecutionContext value = new ExecutionContext();
-            value.put("requestDate", targetDate);
+            value.put("requestDate", targetDate.toString());
             result.put("partition" + partitionNumber, value);
 
             targetDate = targetDate.plusDays(gridSize);
