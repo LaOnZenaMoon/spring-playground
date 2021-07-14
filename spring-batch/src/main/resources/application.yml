@@ -9,20 +9,18 @@ spring:
     active: local
   batch.job.names: ${job.name:NONE}
   jpa:
-    open-in-view: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: none  #절대 값 변경 금지!!
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.Oracle10gDialect
         default_batch_fetch_size: 1000
         jdbc:
           lob:
             non_contextual_creation: true
           batch_size: 1000
-          order_inserts: true
-          order_updates: true
-      open-in-view: false
+        order_inserts: true
+        order_updates: true
+    open-in-view: false
 
 logging:
   level:
