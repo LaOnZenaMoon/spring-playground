@@ -27,7 +27,7 @@ interface Thermometer {
 @EnableScheduling
 @Configuration
 @Import({FakeThermometer.class, WeatherForecastService.class})
-class TestConfig {
+class TestConfig2 {
 
     @Bean
     public TemperatureMeasurementCallback callback() {
