@@ -1,17 +1,15 @@
-# spring-playground
+## spring-playground
 All about spring framework
 
+### spring-boot
+* A service for Spring Boot
+  * Spring Security will be tested together
+  
+### spring-batch
+* A service for Spring Batch
 
-## spring-boot
-* spring-security will be tested together
-
-
-## spring-batch
-
-
-## core
-* common entities and utils
-
+### core
+* Common entities and utilities
 
 ## skills
 * Java 11
