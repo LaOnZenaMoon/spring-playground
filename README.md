@@ -14,8 +14,8 @@ All about spring framework
 
 
 ## skills
-* Java 1.8
-* Spring Boot
+* Java 11
+* Spring Boot 2.5.x
 * Spring Batch  
 * JPA, Querydsl
 * Spring REST Docs

@@ -2,13 +2,15 @@ bootJar { enabled = false }
 jar { enabled = true }
 
 dependencies {
-    implementation 'jakarta.validation:jakarta.validation-api'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'jakarta.validation:jakarta.validation-api'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
 
     // QueryDSL
-    implementation("com.querydsl:querydsl-jpa")
-    implementation("com.querydsl:querydsl-apt")
+    implementation 'com.querydsl:querydsl-jpa'
+    implementation 'com.querydsl:querydsl-apt'
 
+    // JPA Logging
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.7.1'
 
     // Swagger

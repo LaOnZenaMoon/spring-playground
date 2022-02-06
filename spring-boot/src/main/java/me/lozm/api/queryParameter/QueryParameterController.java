@@ -1,12 +1,12 @@
 package me.lozm.api.queryParameter;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
 import java.util.HashMap;
 
 @RequestMapping("query-parameter")
@@ -27,7 +27,7 @@ public class QueryParameterController {
     }
 
     @GetMapping("model")
-    public ResponseEntity getQueryParametersUsingModel(@Valid QueryParameterModel queryParameterModel) {
+    public ResponseEntity getQueryParametersUsingModel(@Validated QueryParameterModel queryParameterModel) {
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("name", queryParameterModel.getName());
