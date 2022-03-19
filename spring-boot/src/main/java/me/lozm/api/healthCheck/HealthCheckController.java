@@ -1,5 +1,6 @@
 package me.lozm.api.healthCheck;
 
+import me.lozm.global.annotation.CustomAnnotation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.time.ZoneOffset;
 public class HealthCheckController {
 
     @GetMapping
+    @CustomAnnotation(name = "test", values = {"first", "second"})
     public ResponseEntity<HealthCheckDto.ShortResponse> getHealthCheck(@RequestParam(value = "format", required = false) String format) {
         if ("short".equals(format)) {
             return new ResponseEntity<>(new HealthCheckDto.ShortResponse(HttpStatus.OK.getReasonPhrase()), HttpStatus.OK);
